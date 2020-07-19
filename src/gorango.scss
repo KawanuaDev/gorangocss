@@ -6,3 +6,54 @@
 // Link: https://github.com/KawanuaDev/gorangocss
 // Link: https://gitlab.com/kawanuadev/gorangocss
 // ------------------------
+
+// ------------------------
+// PADDING
+// ------------------------
+// Usage:
+// @include padding(<NAME>, <NUMBER>, <UNIT>)
+//
+// NAME    : top, right, bottom, left, x, y
+// NUMBER  : 1 - unlimited
+// UNIT    : px, em, rem
+// ------------------------
+
+
+@mixin padding($name, $num, $unit) {
+  @if $name == "bottom" or $name == "b" {
+    .pb-#{$num} {
+      padding-bottom: $num + $unit;
+    }    
+  }
+  @if $name == "top" or $name == "t" {
+    .pt-#{$num} {
+      padding-top: $num + $unit;
+    }    
+  }
+  @if $name == "left" or $name == "l" {
+    .pl-#{$num} {
+      padding-left: $num + $unit;
+    }    
+  }
+  @if $name == "right" or $name == "r" {
+    .pr-#{$num} {
+      padding-right: $num + $unit;
+    }    
+  }
+  @if $name == "y" {
+    .py-#{$num} {
+      padding: {
+          top: $num + $unit;
+          bottom: $num + $unit;
+      }
+    }    
+  }
+  @if $name == "x" {
+    .px-#{$num} {
+      padding: {
+          left: $num + $unit;
+          right: $num + $unit;
+      }
+    }    
+  }
+}

@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/KawanuaDev/gorangocss.git"
   },
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
-  },
   "keywords": [
     "gorangocss",
     "css",

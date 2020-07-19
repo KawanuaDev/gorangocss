@@ -1,0 +1,30 @@
+{
+  "name": "gorangocss",
+  "version": "1.0.0",
+  "description": "A CSS framework for building custom user interfaces.",
+  "main": "index.js",
+  "scripts": {
+    "git:push": "./push.sh",
+    "minify-css": "postcss src/gorango.css > dist/gorango.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KawanuaDev/gorangocss.git"
+  },
+  "keywords": [
+    "gorangocss",
+    "css",
+    "css-framework",
+    "responsive"
+  ],
+  "author": "KawanuaDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KawanuaDev/gorangocss/issues"
+  },
+  "homepage": "https://github.com/KawanuaDev/gorangocss#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1"
+  }
+}

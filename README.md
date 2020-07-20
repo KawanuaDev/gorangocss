@@ -1,7 +1,9 @@
 
-# gorango.css [![Build Status](https://travis-ci.com/KawanuaDev/gorangocss.svg?branch=master)](https://travis-ci.com/KawanuaDev/gorangocss) ![npm](https://img.shields.io/npm/v/gorangocss) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_small)
+# gorango.css [![Build Status](https://travis-ci.com/KawanuaDev/gorangocss.svg?branch=master)](https://travis-ci.com/KawanuaDev/gorangocss) ![npm](https://img.shields.io/npm/v/gorangocss)
 
 A CSS framework for building custom user interfaces.
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_small)
 
 ## Usage
 

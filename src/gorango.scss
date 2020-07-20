@@ -9,6 +9,7 @@
 
 // ------------------------
 // * Layout
+// * Typography
 // * Padding
 // * Margin
 // * border-radius
@@ -44,6 +45,91 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   margin-right: auto;
   max-width: 1140px;
 }
+
+// ------------------------
+// FONT-WEIGHT
+// ------------------------
+// Usage (SCSS):
+// @include fontw(<NUMBER>)
+//
+// NUMBER  : 100, 200, 300, 400, 500, 600, 700, 800, 900
+
+// Usage (CSS):
+// .hairline
+// .xlight
+// .light
+// .regular
+// .medium
+// .semibold
+// .bold
+// .xbold
+// .heavy
+//
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
+// ------------------------
+
+@mixin font($num) {
+  @if $num < 100 {
+    .hairline {
+      font-weight: 100;
+    }
+  }
+  @if $num == 100 {
+    .hairline {
+      font-weight: 100;
+    }
+  }
+  @if $num == 200 {
+    .xlight {
+      font-weight: 200;
+    }
+  }
+  @if $num == 300 {
+    .light {
+      font-weight: 300;
+    }
+  }
+  @if $num == 400 {
+    .regular {
+      font-weight: 400;
+    }
+  }
+  @if $num == 500 {
+    .medium {
+      font-weight: 500;
+    }
+  }
+  @if $num == 600 {
+    .semibold {
+      font-weight: 600;
+    }
+  }
+  @if $num == 700 {
+    .bold {
+      font-weight: 700;
+    }
+  }
+  @if $num == 800 {
+    .xbold {
+      font-weight: 800;
+    }
+  }
+  @if $num == 900 {
+    .heavy {
+      font-weight: 900;
+    }
+  }
+}
+
+@include font(100);
+@include font(200);
+@include font(300);
+@include font(400);
+@include font(500);
+@include font(600);
+@include font(700);
+@include font(800);
+@include font(900);
 
 // ------------------------
 // PADDING

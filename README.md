@@ -1,5 +1,5 @@
 
-# gorango.css [![Build Status](https://travis-ci.com/kawanuaid/gorangocss.svg?branch=master)](https://travis-ci.com/kawanuaid/gorangocss) ![npm](https://img.shields.io/npm/v/gorangocss) ![NPM](https://img.shields.io/npm/l/gorangocss)
+# gorango.css [![Build Status](https://travis-ci.com/KawanuaDev/gorangocss.svg?branch=master)](https://travis-ci.com/KawanuaDev/gorangocss) ![npm](https://img.shields.io/npm/v/gorangocss) ![NPM](https://img.shields.io/npm/l/gorangocss)
 
 A CSS framework for building custom user interfaces.
 

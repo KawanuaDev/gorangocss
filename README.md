@@ -1,5 +1,5 @@
-
 # gorango.css [![Build Status](https://travis-ci.com/KawanuaDev/gorangocss.svg?branch=master)](https://travis-ci.com/KawanuaDev/gorangocss) ![npm](https://img.shields.io/npm/v/gorangocss) ![NPM](https://img.shields.io/npm/l/gorangocss)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_shield)
 
 A CSS framework for building custom user interfaces.
 
@@ -24,3 +24,6 @@ Or, you can use another method by adding this snippet inside your stylesheet fil
 ## License
 
 [MIT License](https://github.com/KawanuaDev/gorangocss/blob/master/LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_large)

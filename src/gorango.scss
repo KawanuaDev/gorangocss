@@ -277,27 +277,27 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 @mixin margin($name, $num, $unit) {
   @if $name == "bottom" or $name == "b" {
-    .mb-#{$num}, .margin--#{$name}--#{$num} {
+    .mb--#{$num}, .margin--#{$name}--#{$num} {
       margin-bottom: $num + $unit;
     }    
   }
   @if $name == "top" or $name == "t" {
-    .mt-#{$num}, .margin--#{$name}--#{$num} {
+    .mt--#{$num}, .margin--#{$name}--#{$num} {
       margin-top: $num + $unit;
     }    
   }
   @if $name == "left" or $name == "l" {
-    .ml-#{$num}, .margin--#{$name}--#{$num} {
+    .ml--#{$num}, .margin--#{$name}--#{$num} {
       margin-left: $num + $unit;
     }    
   }
   @if $name == "right" or $name == "r" {
-    .mr-#{$num}, .margin--#{$name}--#{$num} {
+    .mr--#{$num}, .margin--#{$name}--#{$num} {
       margin-right: $num + $unit;
     }    
   }
   @if $name == "y" {
-    .my-#{$num}, .margin--#{$name}--#{$num} {
+    .my--#{$num}, .margin--#{$name}--#{$num} {
       margin: {
           top: $num + $unit;
           bottom: $num + $unit;
@@ -305,7 +305,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     }    
   }
   @if $name == "x" {
-    .mx-#{$num}, .margin--#{$name}--#{$num} {
+    .mx--#{$num}, .margin--#{$name}--#{$num} {
       margin: {
           left: $num + $unit;
           right: $num + $unit;

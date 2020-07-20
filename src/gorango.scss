@@ -1,11 +1,49 @@
 // ------------------------
 // gorango.css
-// v1.2.0
+// v1.3.0
 //
 // Last modified: 20-07-2020
 // Link: https://github.com/KawanuaDev/gorangocss
 // Link: https://gitlab.com/kawanuadev/gorangocss
 // ------------------------
+
+// ------------------------
+// * Layout
+// * Padding
+// * Margin
+// * border-radius
+// ------------------------
+
+// ------------------------
+// LAYOUT
+// ------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+}
 
 // ------------------------
 // PADDING
@@ -255,4 +293,151 @@
 @include margin(x,8,rem);
 @include margin(x,9,rem);
 @include margin(x,10,rem);
+
+
+// ------------------------
+// BORDER-RADIUS
+// ------------------------
+// Usage (SCSS):
+// @include rounded(<NAME>,<NUMBER>,<UNIT>)
+//
+// NAME    : all, a, top, t, right, r, bottom, b, left, l
+// NUMBER  : 1 - unlimited
+// UNIT    : px, em, rem
+
+// Usage (CSS):
+// rounded-all-<NUMBER>
+// rounded-top-<NUMBER>
+// rounded-right-<NUMBER>
+// rounded-bottom-<NUMBER>
+// rounded-left-<NUMBER>
+// ------------------------
+
+@mixin rounded($name, $num, $unit) {
+  @if $name == "all" or $name == "a" {
+    @if $num < 1 {
+      .rounded-all-1 {
+        border-radius: 1 + $unit;
+      }
+    }
+    @if $num >= 1 {
+      .rounded-all-#{$num} {
+        border-radius: $num + $unit;
+      }
+    }
+  }
+  @if $name == "top" or $name == "t" {
+    @if $num < 1 {
+      .rounded-top-1 {
+        border-top-left-radius: 1 + $unit;
+        border-top-right-radius: 1 + $unit;
+      }
+    }
+    @if $num >= 1 {
+      .rounded-top-#{$num} {
+        border-top-left-radius: $num + $unit;
+        border-top-right-radius: $num + $unit;
+      }
+    }
+  }
+  @if $name == "right" or $name == "r" {
+    @if $num < 1 {
+      .rounded-right-1 {
+        border-top-right-radius: 1 + $unit;
+        border-bottom-right-radius: 1 + $unit;
+      }
+    }
+    @if $num >= 1 {
+      .rounded-right-#{$num} {
+        border-top-right-radius: $num + $unit;
+        border-bottom-right-radius: $num + $unit;
+      }
+    }    
+  }
+  @if $name == "bottom" or $name == "b" {
+    @if $num < 1 {
+      .rounded-bottom-1 {
+        border-bottom-right-radius: 1 + $unit;
+        border-bottom-left-radius: 1 + $unit;
+      }
+    }
+    @if $num >= 1 {
+      .rounded-bottom-#{$num} {
+        border-bottom-right-radius: $num + $unit;
+        border-bottom-left-radius: $num + $unit;
+      }
+    }
+  }
+  @if $name == "left" or $name == "l" {
+    @if $num < 1 {
+      .rounded-left-1 {
+        border-bottom-left-radius: 1 + $unit;
+        border-top-left-radius: 1 + $unit;
+      }
+    }
+    @if $num >= 1 {
+      .rounded-left-#{$num} {
+        border-bottom-left-radius: $num + $unit;
+        border-top-left-radius: $num + $unit;
+      }
+    }
+  }
+}
+
+@include rounded(a,1,rem);
+@include rounded(a,2,rem);
+@include rounded(a,3,rem);
+@include rounded(a,4,rem);
+@include rounded(a,5,rem);
+@include rounded(a,6,rem);
+@include rounded(a,7,rem);
+@include rounded(a,8,rem);
+@include rounded(a,9,rem);
+@include rounded(a,10,rem);
+
+@include rounded(t,1,rem);
+@include rounded(t,2,rem);
+@include rounded(t,3,rem);
+@include rounded(t,4,rem);
+@include rounded(t,5,rem);
+@include rounded(t,6,rem);
+@include rounded(t,7,rem);
+@include rounded(t,8,rem);
+@include rounded(t,9,rem);
+@include rounded(t,10,rem);
+
+@include rounded(r,1,rem);
+@include rounded(r,2,rem);
+@include rounded(r,3,rem);
+@include rounded(r,4,rem);
+@include rounded(r,5,rem);
+@include rounded(r,6,rem);
+@include rounded(r,7,rem);
+@include rounded(r,8,rem);
+@include rounded(r,9,rem);
+@include rounded(r,10,rem);
+
+@include rounded(b,1,rem);
+@include rounded(b,2,rem);
+@include rounded(b,3,rem);
+@include rounded(b,4,rem);
+@include rounded(b,5,rem);
+@include rounded(b,6,rem);
+@include rounded(b,7,rem);
+@include rounded(b,8,rem);
+@include rounded(b,9,rem);
+@include rounded(b,10,rem);
+
+@include rounded(l,1,rem);
+@include rounded(l,2,rem);
+@include rounded(l,3,rem);
+@include rounded(l,4,rem);
+@include rounded(l,5,rem);
+@include rounded(l,6,rem);
+@include rounded(l,7,rem);
+@include rounded(l,8,rem);
+@include rounded(l,9,rem);
+@include rounded(l,10,rem);
+
+
 

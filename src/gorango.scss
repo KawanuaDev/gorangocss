@@ -1,6 +1,6 @@
 // ------------------------
 // gorango.css
-// v1.3.0
+// v1.4.1
 //
 // Last modified: 20-07-2020
 // Link: https://github.com/KawanuaDev/gorangocss
@@ -29,7 +29,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-.container-fluid {
+.container--fluid {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -55,67 +55,67 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // NUMBER  : 100, 200, 300, 400, 500, 600, 700, 800, 900
 
 // Usage (CSS):
-// .hairline
-// .xlight
-// .light
-// .regular
-// .medium
-// .semibold
-// .bold
-// .xbold
-// .heavy
+// .hairline OR .font--hairline OR .font--100
+// .xlight OR .font--xlight OR .font--200
+// .light OR .font--light OR .font--300
+// .regular OR .font--regular OR .font--400
+// .medium OR .font--medium OR .font--500
+// .semibold OR .font--semibold OR .font--600
+// .bold OR .font--bold OR .font--700
+// .xbold OR .font--xbold OR .font--800
+// .heavy OR .font--heavy OR .font--900
 //
 // https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
 // ------------------------
 
 @mixin font($num) {
   @if $num < 100 {
-    .hairline {
+    .hairline, .font--hairline, .font--100 {
       font-weight: 100;
     }
   }
   @if $num == 100 {
-    .hairline {
+    .hairline, .font--hairline, .font--100 {
       font-weight: 100;
     }
   }
   @if $num == 200 {
-    .xlight {
+    .xlight, .font--xlight, .font--#{$num} {
       font-weight: 200;
     }
   }
   @if $num == 300 {
-    .light {
+    .light, .font--light, .font--#{$num} {
       font-weight: 300;
     }
   }
   @if $num == 400 {
-    .regular {
+    .regular, .font--regular, .font--#{$num} {
       font-weight: 400;
     }
   }
   @if $num == 500 {
-    .medium {
+    .medium, .font--medium, .font--#{$num} {
       font-weight: 500;
     }
   }
   @if $num == 600 {
-    .semibold {
+    .semibold, .font--semibold, .font--#{$num} {
       font-weight: 600;
     }
   }
   @if $num == 700 {
-    .bold {
+    .bold, .font--bold, .font--#{$num} {
       font-weight: 700;
     }
   }
   @if $num == 800 {
-    .xbold {
+    .xbold, .font--xbold, .font--#{$num} {
       font-weight: 800;
     }
   }
   @if $num == 900 {
-    .heavy {
+    .heavy, .font--heavy, .font--#{$num} {
       font-weight: 900;
     }
   }
@@ -142,37 +142,37 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // UNIT    : px, em, rem
 
 // Usage (CSS):
-// pt-<NUMBER>
-// pr-<NUMBER>
-// pb-<NUMBER>
-// pl-<NUMBER>
-// px-<NUMBER>
-// py-<NUMBER>
+// .pt--<NUMBER> OR .padding--top--<NUMBER> OR .padding--t--<NUMBER>
+// .pr--<NUMBER> OR .padding--right--<NUMBER> OR .padding--r--<NUMBER>
+// .pb--<NUMBER> OR .padding--bottom--<NUMBER> OR .padding--b--<NUMBER>
+// .pl--<NUMBER> OR .padding--left--<NUMBER> OR .padding--l--<NUMBER>
+// .px--<NUMBER> OR .padding--x--<NUMBER>
+// .py--<NUMBER> OR .padding--y--<NUMBER>
 // ------------------------
 
 @mixin padding($name, $num, $unit) {
   @if $name == "bottom" or $name == "b" {
-    .pb-#{$num} {
+    .pb--#{$num}, .padding--#{$name}--#{$num} {
       padding-bottom: $num + $unit;
     }    
   }
   @if $name == "top" or $name == "t" {
-    .pt-#{$num} {
+    .pt--#{$num}, .padding--#{$name}--#{$num} {
       padding-top: $num + $unit;
     }    
   }
   @if $name == "left" or $name == "l" {
-    .pl-#{$num} {
+    .pl--#{$num}, .padding--#{$name}--#{$num} {
       padding-left: $num + $unit;
     }    
   }
   @if $name == "right" or $name == "r" {
-    .pr-#{$num} {
+    .pr--#{$num}, .padding--#{$name}--#{$num} {
       padding-right: $num + $unit;
     }    
   }
   @if $name == "y" {
-    .py-#{$num} {
+    .py--#{$num}, .padding--#{$name}--#{$num} {
       padding: {
           top: $num + $unit;
           bottom: $num + $unit;
@@ -180,7 +180,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     }    
   }
   @if $name == "x" {
-    .px-#{$num} {
+    .px--#{$num}, .padding--#{$name}--#{$num} {
       padding: {
           left: $num + $unit;
           right: $num + $unit;
@@ -267,37 +267,37 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // UNIT    : px, em, rem
 
 // Usage (CSS):
-// mt-<NUMBER>
-// mr-<NUMBER>
-// mb-<NUMBER>
-// ml-<NUMBER>
-// mx-<NUMBER>
-// my-<NUMBER>
+// .mt--<NUMBER> OR .margin--top--<NUMBER> OR .margin--t--<NUMBER>
+// .mr---<NUMBER> OR .margin--right--<NUMBER> OR .margin--r--<NUMBER>
+// .mb--<NUMBER> OR .margin--bottom--<NUMBER> OR .margin--b--<NUMBER>
+// .ml--<NUMBER> OR .margin--left--<NUMBER> OR .margin--l--<NUMBER>
+// .mx--<NUMBER> OR .margin--x--<NUMBER>
+// .my--<NUMBER> OR .margin--y--<NUMBER>
 // ------------------------
 
 @mixin margin($name, $num, $unit) {
   @if $name == "bottom" or $name == "b" {
-    .mb-#{$num} {
+    .mb-#{$num}, .margin--#{$name}--#{$num} {
       margin-bottom: $num + $unit;
     }    
   }
   @if $name == "top" or $name == "t" {
-    .mt-#{$num} {
+    .mt-#{$num}, .margin--#{$name}--#{$num} {
       margin-top: $num + $unit;
     }    
   }
   @if $name == "left" or $name == "l" {
-    .ml-#{$num} {
+    .ml-#{$num}, .margin--#{$name}--#{$num} {
       margin-left: $num + $unit;
     }    
   }
   @if $name == "right" or $name == "r" {
-    .mr-#{$num} {
+    .mr-#{$num}, .margin--#{$name}--#{$num} {
       margin-right: $num + $unit;
     }    
   }
   @if $name == "y" {
-    .my-#{$num} {
+    .my-#{$num}, .margin--#{$name}--#{$num} {
       margin: {
           top: $num + $unit;
           bottom: $num + $unit;
@@ -305,7 +305,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     }    
   }
   @if $name == "x" {
-    .mx-#{$num} {
+    .mx-#{$num}, .margin--#{$name}--#{$num} {
       margin: {
           left: $num + $unit;
           right: $num + $unit;
@@ -392,35 +392,35 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // UNIT    : px, em, rem
 
 // Usage (CSS):
-// rounded-all-<NUMBER>
-// rounded-top-<NUMBER>
-// rounded-right-<NUMBER>
-// rounded-bottom-<NUMBER>
-// rounded-left-<NUMBER>
+// .rounded--all--<NUMBER>
+// .rounded--top--<NUMBER>
+// .rounded--right-<NUMBER>
+// .rounded--bottom--<NUMBER>
+// .rounded--left--<NUMBER>
 // ------------------------
 
 @mixin rounded($name, $num, $unit) {
   @if $name == "all" or $name == "a" {
     @if $num < 1 {
-      .rounded-all-1 {
+      .rounded--all--1 {
         border-radius: 1 + $unit;
       }
     }
     @if $num >= 1 {
-      .rounded-all-#{$num} {
+      .rounded--all--#{$num} {
         border-radius: $num + $unit;
       }
     }
   }
   @if $name == "top" or $name == "t" {
     @if $num < 1 {
-      .rounded-top-1 {
+      .rounded--top--1 {
         border-top-left-radius: 1 + $unit;
         border-top-right-radius: 1 + $unit;
       }
     }
     @if $num >= 1 {
-      .rounded-top-#{$num} {
+      .rounded--top--#{$num} {
         border-top-left-radius: $num + $unit;
         border-top-right-radius: $num + $unit;
       }
@@ -428,13 +428,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   }
   @if $name == "right" or $name == "r" {
     @if $num < 1 {
-      .rounded-right-1 {
+      .rounded--right--1 {
         border-top-right-radius: 1 + $unit;
         border-bottom-right-radius: 1 + $unit;
       }
     }
     @if $num >= 1 {
-      .rounded-right-#{$num} {
+      .rounded--right--#{$num} {
         border-top-right-radius: $num + $unit;
         border-bottom-right-radius: $num + $unit;
       }
@@ -442,13 +442,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   }
   @if $name == "bottom" or $name == "b" {
     @if $num < 1 {
-      .rounded-bottom-1 {
+      .rounded--bottom--1 {
         border-bottom-right-radius: 1 + $unit;
         border-bottom-left-radius: 1 + $unit;
       }
     }
     @if $num >= 1 {
-      .rounded-bottom-#{$num} {
+      .rounded--bottom--#{$num} {
         border-bottom-right-radius: $num + $unit;
         border-bottom-left-radius: $num + $unit;
       }
@@ -456,13 +456,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   }
   @if $name == "left" or $name == "l" {
     @if $num < 1 {
-      .rounded-left-1 {
+      .rounded--left--1 {
         border-bottom-left-radius: 1 + $unit;
         border-top-left-radius: 1 + $unit;
       }
     }
     @if $num >= 1 {
-      .rounded-left-#{$num} {
+      .rounded--left--#{$num} {
         border-bottom-left-radius: $num + $unit;
         border-top-left-radius: $num + $unit;
       }

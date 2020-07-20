@@ -17,6 +17,10 @@
     "css-framework",
     "responsive"
   ],
+  "files": [
+    "dist/*.css",
+    "src/*.map"
+  ],
   "author": "KawanuaDev",
   "license": "MIT",
   "bugs": {

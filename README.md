@@ -15,9 +15,6 @@ Please add this snippet inside your HEAD tag.
 
 <!-- Alternative #2 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gorangocss@latest/dist/gorango.min.css" crossorigin="anonymous">
-
-<!-- Alternative #3 -->
-<link rel="stylesheet" href="https://static.my.id/libs/gorangocss/latest/dist/gorango.min.css" crossorigin="anonymous">
 ```
 
 Or, you can use another method by adding this snippet inside your stylesheet file.
@@ -25,6 +22,10 @@ Or, you can use another method by adding this snippet inside your stylesheet fil
 ```css
 @import url('https://unpkg.com/gorangocss@latest/dist/gorango.min.css');
 ```
+
+## Code Of Conduct
+
+[Read more](https://github.com/KawanuaDev/gorangocss/blob/master/CODE_OF_CONDUCT.md)
 
 ## License
 

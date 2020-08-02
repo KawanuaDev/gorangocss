@@ -7,6 +7,14 @@ A CSS framework for building custom user interfaces.
 
 ## Usage
 
+### Via NPM
+
+```bash
+npm install gorangocss
+```
+
+### Via CDN
+
 Please add this snippet inside your HEAD tag.
 
 ```html

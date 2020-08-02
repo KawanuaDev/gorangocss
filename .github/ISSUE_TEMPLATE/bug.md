@@ -1,6 +1,6 @@
 ---
-name: GorangoCSS bug issue
-about: Custom issue template for gorangocss project.
+name: Bug issue
+about: Use this form to report newly found bug.
 title: "[BUG] "
 labels: bug
 assignees: erolj, kawanuaid

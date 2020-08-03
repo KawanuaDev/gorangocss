@@ -4,3 +4,4 @@ src/base/*
 src/components/*
 push.sh
 pub.sh
+pull.sh

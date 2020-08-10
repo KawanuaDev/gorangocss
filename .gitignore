@@ -1,5 +1,7 @@
 node_modules/*
 src/gorango.css
-src/test/*
+src/base/*
+src/components/*
 push.sh
 pub.sh
+pull.sh

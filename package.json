@@ -1,6 +1,6 @@
 {
   "name": "gorangocss",
-  "version": "1.4.2",
+  "version": "1.10.1",
   "description": "A CSS framework for building custom user interfaces.",
   "main": "index.js",
   "scripts": {
@@ -26,9 +26,12 @@
   "bugs": {
     "url": "https://github.com/KawanuaDev/gorangocss/issues"
   },
-  "homepage": "https://github.com/KawanuaDev/gorangocss#readme",
+  "homepage": "https://gorangocss.kawanua.id/",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

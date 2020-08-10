@@ -3,7 +3,17 @@
 
 A CSS framework for building custom user interfaces.
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_small)
+
 ## Usage
+
+### Via NPM
+
+```bash
+npm install gorangocss
+```
+
+### Via CDN
 
 Please add this snippet inside your HEAD tag.
 
@@ -20,6 +30,10 @@ Or, you can use another method by adding this snippet inside your stylesheet fil
 ```css
 @import url('https://unpkg.com/gorangocss@latest/dist/gorango.min.css');
 ```
+
+## Code Of Conduct
+
+[Read more](https://github.com/KawanuaDev/gorangocss/blob/master/CODE_OF_CONDUCT.md)
 
 ## License
 

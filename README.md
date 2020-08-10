@@ -2,9 +2,19 @@
 
 A CSS framework for building custom user interfaces.
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Contributing](#contributing)
+- [Code Of Conduct](#code-of-conduct)
+- [Usage](#usage)
+  - [Via NPM](#via-npm)
+  - [Via CDN](#via-cdn)
+- [License](#license)
+
 ## Contributing
 
-We encourage you to contribute to GorangoCSS! Please check out the [Contributing to GorangoCSS guide](https://docs.gorangocss.kawanua.id/contributing/gorangocss) for guidelines about how to proceed.
+We encourage you to contribute to GorangoCSS! Please check out the [Contributing to GorangoCSS guide](https://github.com/KawanuaDev/gorangocss/blob/master/CONTRIBUTING.md) for guidelines about how to proceed.
 
 ## Code Of Conduct
 
@@ -38,6 +48,6 @@ Or, you can use another method by adding this snippet inside your stylesheet fil
 
 ## License
 
-[MIT License](https://github.com/KawanuaDev/gorangocss/blob/master/LICENSE)
+Please see the [LICENSE](https://github.com/KawanuaDev/gorangocss/blob/master/LICENSE) file in our repository.
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FKawanuaDev%2Fgorangocss?ref=badge_large)

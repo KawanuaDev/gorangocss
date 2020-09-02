@@ -70,6 +70,7 @@
     flex-wrap: wrap;
   }
   &.-align-content-evenly {
+    @extend %s-align-content;
     align-content: space-evenly;
   }
   &.-align-content-around {

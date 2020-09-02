@@ -1,0 +1,140 @@
+/* ------------------------
+| PADDING
+| ------------------------
+| Usage (SCSS):
+| @include padding(<NAME>,<NUMBER>,<UNIT>)
+|
+| NAME    : all, a, top, t, right, r, bottom, b, left, l, x, y
+| NUMBER  : 1 - unlimited
+| UNIT    : px, em, rem
+
+| Usage (CSS):
+| .pa--<NUMBER> OR .padding--<NUMBER>
+| .pt--<NUMBER> OR .padding--top--<NUMBER> OR .padding--t--<NUMBER>
+| .pr--<NUMBER> OR .padding--right--<NUMBER> OR .padding--r--<NUMBER>
+| .pb--<NUMBER> OR .padding--bottom--<NUMBER> OR .padding--b--<NUMBER>
+| .pl--<NUMBER> OR .padding--left--<NUMBER> OR .padding--l--<NUMBER>
+| .px--<NUMBER> OR .padding--x--<NUMBER>
+| .py--<NUMBER> OR .padding--y--<NUMBER>
+| ------------------------ */
+
+@mixin padding($name, $num, $unit) {
+  @if $name == "all" or $name == "a" {
+    .pa--#{$num}, .padding--#{$num} {
+      padding: $num + $unit;
+    }    
+  }
+  @if $name == "bottom" or $name == "b" {
+    .pb--#{$num}, .padding--#{$name}--#{$num} {
+      padding-bottom: $num + $unit;
+    }    
+  }
+  @if $name == "top" or $name == "t" {
+    .pt--#{$num}, .padding--#{$name}--#{$num} {
+      padding-top: $num + $unit;
+    }    
+  }
+  @if $name == "left" or $name == "l" {
+    .pl--#{$num}, .padding--#{$name}--#{$num} {
+      padding-left: $num + $unit;
+    }    
+  }
+  @if $name == "right" or $name == "r" {
+    .pr--#{$num}, .padding--#{$name}--#{$num} {
+      padding-right: $num + $unit;
+    }    
+  }
+  @if $name == "y" {
+    .py--#{$num}, .padding--#{$name}--#{$num} {
+      padding: {
+          top: $num + $unit;
+          bottom: $num + $unit;
+      }
+    }    
+  }
+  @if $name == "x" {
+    .px--#{$num}, .padding--#{$name}--#{$num} {
+      padding: {
+          left: $num + $unit;
+          right: $num + $unit;
+      }
+    }    
+  }
+}
+
+@include padding(a,1,rem);
+@include padding(a,2,rem);
+@include padding(a,3,rem);
+@include padding(a,4,rem);
+@include padding(a,5,rem);
+@include padding(a,6,rem);
+@include padding(a,7,rem);
+@include padding(a,8,rem);
+@include padding(a,9,rem);
+@include padding(a,10,rem);
+
+@include padding(t,1,rem);
+@include padding(t,2,rem);
+@include padding(t,3,rem);
+@include padding(t,4,rem);
+@include padding(t,5,rem);
+@include padding(t,6,rem);
+@include padding(t,7,rem);
+@include padding(t,8,rem);
+@include padding(t,9,rem);
+@include padding(t,10,rem);
+
+@include padding(r,1,rem);
+@include padding(r,2,rem);
+@include padding(r,3,rem);
+@include padding(r,4,rem);
+@include padding(r,5,rem);
+@include padding(r,6,rem);
+@include padding(r,7,rem);
+@include padding(r,8,rem);
+@include padding(r,9,rem);
+@include padding(r,10,rem);
+
+@include padding(b,1,rem);
+@include padding(b,2,rem);
+@include padding(b,3,rem);
+@include padding(b,4,rem);
+@include padding(b,5,rem);
+@include padding(b,6,rem);
+@include padding(b,7,rem);
+@include padding(b,8,rem);
+@include padding(b,9,rem);
+@include padding(b,10,rem);
+
+@include padding(l,1,rem);
+@include padding(l,2,rem);
+@include padding(l,3,rem);
+@include padding(l,4,rem);
+@include padding(l,5,rem);
+@include padding(l,6,rem);
+@include padding(l,7,rem);
+@include padding(l,8,rem);
+@include padding(l,9,rem);
+@include padding(l,10,rem);
+
+@include padding(y,1,rem);
+@include padding(y,2,rem);
+@include padding(y,3,rem);
+@include padding(y,4,rem);
+@include padding(y,5,rem);
+@include padding(y,6,rem);
+@include padding(y,7,rem);
+@include padding(y,8,rem);
+@include padding(y,9,rem);
+@include padding(y,10,rem);
+
+@include padding(x,1,rem);
+@include padding(x,2,rem);
+@include padding(x,3,rem);
+@include padding(x,4,rem);
+@include padding(x,5,rem);
+@include padding(x,6,rem);
+@include padding(x,7,rem);
+@include padding(x,8,rem);
+@include padding(x,9,rem);
+@include padding(x,10,rem);

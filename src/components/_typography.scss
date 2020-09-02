@@ -1,0 +1,438 @@
+/* ------------------------
+| HEADER
+| ------------------------
+| Usage (SCSS):
+| @include header(<NUMBER>)
+|
+| NUMBER  : 1, 2, 3, 4, 5, 6
+|
+| Usage (CSS):
+| h1
+| ------------------------ */
+
+@mixin header($hnum) {
+  @if $hnum == 1 {
+    h1 {
+      font-size: 3.5rem;
+      padding-bottom: .875rem;
+      padding-top: 1.75rem;
+      margin: 0;
+    }
+  }
+  @if $hnum == 2 {
+    h2 {
+      font-size: 3rem;
+      padding-bottom: .75rem;
+      padding-top: 1.5rem;
+    }
+  }
+  @if $hnum == 3 {
+    h3 {
+      font-size: 2.5rem;
+      padding-bottom: .625rem;
+      padding-top: 1.25rem;
+    }
+  }
+  @if $hnum == 4 {
+    h4 {
+      font-size: 2rem;
+      padding-bottom: .5rem;
+      padding-top: 1rem;
+    }
+  }
+  @if $hnum == 5 {
+    h5 {
+      font-size: 1.5rem;
+      padding-bottom: .375rem;
+      padding-top: .75rem;
+    }
+  }
+  @if $hnum == 6 {
+    h6 {
+      font-size: 1rem;
+      padding-bottom: .25rem;
+      padding-top: .5rem;
+    }
+  }
+}
+
+@include header(1);
+@include header(2);
+@include header(3);
+@include header(4);
+@include header(5);
+@include header(6);
+
+
+/* ------------------------
+| FONT-SIZE
+| ------------------------
+| Usage (SCSS):
+| @include size(<NAME>)
+|
+| NUMBER  : xs, sm, md, lg, xl, 2xl, 3xl, 4xl
+|
+| Usage (CSS):
+| .font--<NAME>
+| ------------------------ */
+
+@mixin size($name) {
+  @if $name == "xs" {
+    .font--#{$name} {
+      font-size: .75rem;
+      font-size: clamp(.75rem, -3vh, 1.5rem) !important;
+    }
+  }
+  @if $name == "sm" {
+    .font--#{$name} {
+      font-size: clamp(.9rem, -1vh, 1.8rem) !important;
+    }
+  }
+  @if $name == "md" {
+    .font--#{$name} {
+      font-size: clamp(1.5rem, 1vh, 3rem) !important;
+    }
+  }
+  @if $name == "lg" {
+    .font--#{$name} {
+      font-size: clamp(2rem, 3vh, 4rem) !important;
+    }
+  }
+  @if $name == "xl" {
+    .font--#{$name} {
+      font-size: clamp(2.5rem, 5vh, 5rem) !important;
+    }
+  }
+  @if $name == "2xl" {
+    .font--#{$name} {
+      font-size: clamp(3rem, 7vh, 6rem) !important;
+    }
+  }
+  @if $name == "3xl" {
+    .font--#{$name} {
+      font-size: clamp(3.5rem, 9vh, 7rem) !important;
+    }
+  }
+  @if $name == "4xl" {
+    .font--#{$name} {
+      font-size: clamp(4rem, 11vh, 8rem) !important;
+    }
+  }
+}
+
+@include size("xs");
+@include size("sm");
+@include size("md");
+@include size("lg");
+@include size("xl");
+@include size("2xl");
+@include size("3xl");
+@include size("4xl");
+
+
+/* ------------------------
+| FONT-WEIGHT
+| ------------------------
+| Usage (SCSS):
+| @include fontw(<NUMBER>)
+|
+| NUMBER  : 100, 200, 300, 400, 500, 600, 700, 800, 900
+|
+| Usage (CSS):
+| .hairline OR .font--hairline OR .font--100
+| .xlight OR .font--xlight OR .font--200
+| .light OR .font--light OR .font--300
+| .regular OR .font--regular OR .font--400
+| .medium OR .font--medium OR .font--500
+| .semibold OR .font--semibold OR .font--600
+| .bold OR .font--bold OR .font--700
+| .xbold OR .font--xbold OR .font--800
+| .heavy OR .font--heavy OR .font--900
+|
+| https:|developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
+| ------------------------ */
+
+@mixin font($fnum) {
+  @if $fnum < 100 {
+    .hairline, .font--hairline, .font--100 {
+      font-weight: 100;
+    }
+  }
+  @if $fnum == 100 {
+    .hairline, .font--hairline, .font--100 {
+      font-weight: 100;
+    }
+  }
+  @if $fnum == 200 {
+    .xlight, .font--xlight, .font--#{$fnum} {
+      font-weight: 200;
+    }
+  }
+  @if $fnum == 300 {
+    .light, .font--light, .font--#{$fnum} {
+      font-weight: 300;
+    }
+  }
+  @if $fnum == 400 {
+    .regular, .font--regular, .font--#{$fnum} {
+      font-weight: 400;
+    }
+  }
+  @if $fnum == 500 {
+    .medium, .font--medium, .font--#{$fnum} {
+      font-weight: 500;
+    }
+  }
+  @if $fnum == 600 {
+    .semibold, .font--semibold, .font--#{$fnum} {
+      font-weight: 600;
+    }
+  }
+  @if $fnum == 700 {
+    .bold, .font--bold, .font--#{$fnum} {
+      font-weight: 700;
+    }
+  }
+  @if $fnum == 800 {
+    .xbold, .font--xbold, .font--#{$fnum} {
+      font-weight: 800;
+    }
+  }
+  @if $fnum == 900 {
+    .heavy, .font--heavy, .font--#{$fnum} {
+      font-weight: 900;
+    }
+  }
+}
+
+@include font(100);
+@include font(200);
+@include font(300);
+@include font(400);
+@include font(500);
+@include font(600);
+@include font(700);
+@include font(800);
+@include font(900);
+
+
+/* ------------------------
+| TEXT-ALIGN
+| ------------------------
+| Usage (SCSS):
+| @include align(<TYPE>)
+|
+| TYPE    : left, center, right.
+|
+| Usage (CSS):
+| .txt--<TYPE>
+| ------------------------ */
+
+@mixin align($atype) {
+  .txt--#{$atype}, .#{$atype} {
+    text-align: $atype;
+  }
+}
+
+@include align(left);
+@include align(center);
+@include align(right);
+
+/* ------------------------
+| TEXT-TRANFORM
+| ------------------------
+| Usage (SCSS):
+| @include transform(<TYPE>)
+|
+| TYPE    : upper, lower, capital.
+|
+| Usage (CSS):
+| .txt--<TYPE>
+| ------------------------ */
+
+@mixin transform($ttype) {
+  @if $ttype == "upper" {
+    .txt--upper, .upper {
+      text-transform: uppercase;
+    }
+  }
+  @if $ttype == "lower" {
+    .txt--lower, .lower {
+      text-transform: lowercase;
+    }
+  }
+  @if $ttype == "capital" {
+    .txt--capital, .capital {
+      text-transform: capitalize;
+    }
+  }
+}
+
+@include transform(upper);
+@include transform(lower);
+@include transform(capital);
+
+/* ------------------------
+| TEXT-COLOR
+| ------------------------
+| Usage (SCSS):
+| @include color(<NAME>)
+|
+| NAME    : white, blue, whitesmoke, tomato, etc.
+|
+| Usage (CSS):
+| .txt--<COLOR>
+| ------------------------ */
+
+@mixin color($cname) {
+  .txt--#{$cname} {
+    color: $cname;
+  }
+}
+
+@include color(black);
+@include color(dimgray);
+@include color(gray);
+@include color(darkgray);
+@include color(slategray);
+@include color(lightslategray);
+@include color(lightsteelblue);
+@include color(silver);
+@include color(lightgray);
+@include color(gainsboro);
+
+@include color(white);
+@include color(whitesmoke);
+@include color(ghostwhite);
+@include color(antiquewhite);
+@include color(azure);
+@include color(lavenderblush);
+@include color(ivory);
+@include color(snow);
+@include color(seashell);
+@include color(mintcream);
+@include color(floralwhite);
+@include color(honeydew);
+@include color(papayawhip);
+@include color(cornsilk);
+@include color(beige);
+@include color(linen);
+@include color(bisque);
+@include color(moccasin);
+@include color(navajowhite);
+@include color(blanchedalmond);
+@include color(oldlace);
+@include color(lightyellow);
+@include color(khaki);
+@include color(darkkhaki);
+@include color(lightgoldenrodyellow);
+@include color(lemonchiffon);
+@include color(palegoldenrod);
+@include color(tan);
+
+@include color(lawngreen);
+@include color(palegreen);
+@include color(lightgreen);
+@include color(greenyellow);
+@include color(chartreuse);
+@include color(lime);
+@include color(yellowgreen);
+@include color(springgreen);
+@include color(mediumspringgreen);
+@include color(limegreen);
+@include color(green);
+@include color(forestgreen);
+@include color(olivedrab);
+@include color(olive);
+@include color(darkolivegreen);
+@include color(darkseagreen);
+@include color(mediumseagreen);
+@include color(seagreen);
+@include color(darkgreen);
+@include color(teal);
+@include color(darkslategray);
+
+@include color(aliceblue);
+@include color(lavender);
+@include color(lightcyan);
+@include color(paleturquoise);
+@include color(aqua);
+@include color(cyan);
+@include color(turquoise);
+@include color(mediumaquamarine);
+@include color(aquamarine);
+@include color(powderblue);
+@include color(mediumturquoise);
+@include color(darkturquoise);
+@include color(lightseagreen);
+@include color(cadetblue);
+@include color(darkcyan);
+@include color(lightblue);
+@include color(skyblue);
+@include color(lightskyblue);
+@include color(deepskyblue);
+@include color(cornflowerblue);
+@include color(steelblue);
+@include color(dodgerblue);
+@include color(royalblue);
+@include color(slateblue);
+@include color(blue);
+@include color(mediumblue);
+@include color(midnightblue);
+@include color(darkblue);
+@include color(navy);
+@include color(darkslateblue);
+
+@include color(indigo);
+@include color(darkviolet);
+@include color(blueviolet);
+@include color(darkorchid);
+@include color(purple);
+@include color(mediumorchid);
+@include color(mediumslateblue);
+@include color(mediumpurple);
+@include color(plum);
+@include color(thistle);
+@include color(pink);
+
+@include color(orchid);
+@include color(violet);
+@include color(hotpink);
+@include color(fuchsia);
+@include color(magenta);
+@include color(mediumvioletred);
+@include color(darkmagenta);
+@include color(darkred);
+@include color(maroon);
+@include color(deeppink);
+@include color(firebrick);
+@include color(orangered);
+@include color(crimson);
+@include color(red);
+@include color(tomato);
+@include color(indianred);
+@include color(salmon);
+@include color(darkorange);
+@include color(darksalmon);
+@include color(palevioletred);
+@include color(lightcoral);
+@include color(orange);
+@include color(lightpink);
+@include color(sandybrown);
+@include color(lightsalmon);
+@include color(mistyrose);
+@include color(peachpuff);
+@include color(wheat);
+@include color(burlywood);
+@include color(yellow);
+@include color(gold);
+@include color(goldenrod);
+@include color(darkgoldenrod);
+@include color(rosybrown);
+@include color(brown);
+@include color(chocolate);
+@include color(coral);
+@include color(peru);
+@include color(sienna);
+@include color(saddlebrown);
+

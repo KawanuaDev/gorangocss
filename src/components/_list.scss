@@ -1,0 +1,15 @@
+/* ------------------------
+| LIST
+| ------------------------ */
+
+.list {
+  &--circle {
+    list-style: circle inside;
+  }
+  &--disc {
+    list-style: disc inside;
+  }
+  &--square {
+    list-style: square inside;
+  }
+}

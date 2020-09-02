@@ -1,0 +1,122 @@
+/* ------------------------
+| NOTICE
+| ------------------------ */
+
+%noticeshare {
+  padding: 0.75rem 1rem;
+  display: flex;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  border-radius: .25rem;
+}
+%close {
+  right: .5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50rem;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  user-select: none;
+  font-size: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  max-height: 1.25rem;
+  max-width: 1.25rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  outline: 0;
+
+  &::before, &::after {
+    background-color: white;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+}
+
+$notice: (
+  "infol": #a5d5f3,
+  "infod": #005c95,
+  "successl": #d4efa9,
+  "successd": #467100,
+  "warnl": #ffe499,
+  "warnd": #846100,
+  "dangerl": #ff999c,
+  "dangerd": #930106
+);
+
+$close: 0.2;
+
+.notice {
+  &--info {
+    @extend %noticeshare;
+    background-color: map-get($notice, "infol");
+    border-left: .3rem solid map-get($defcolor, "info");
+    color: map-get($notice, "infod");
+
+    .close {
+      @extend %close;
+      background-color: rgba(
+        map-get($notice, "infod"), 
+        $close
+      );
+    }
+  }
+  &--success {
+    @extend %noticeshare;
+    background-color:  map-get($notice, "successl");
+    border-left: .3rem solid map-get($defcolor, "success");
+    color: map-get($notice, "successd");
+
+    .close {
+      @extend %close;
+      background-color: rgba(
+        map-get($notice, "successd"), 
+        $close
+      );
+    }
+  }
+  &--warning {
+    @extend %noticeshare;
+    background-color: map-get($notice, "warnl");
+    border-left: .3rem solid map-get($defcolor, "warning");
+    color: map-get($notice, "warnd");
+
+    .close {
+      @extend %close;
+      background-color: rgba(
+        map-get($notice, "warnd"), 
+        $close
+      );
+    }
+  }
+  &--danger {
+    @extend %noticeshare;
+    background-color: map-get($notice, "dangerl");
+    border-left: .3rem solid map-get($defcolor, "danger");
+    color: map-get($notice, "dangerd");
+
+    .close {
+      @extend %close;
+      background-color: rgba(
+        map-get($notice, "dangerd"), 
+        $close
+      );
+    }
+  }
+}

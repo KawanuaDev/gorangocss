@@ -1,0 +1,21 @@
+/* ------------------------
+| FLOAT
+| ------------------------
+| Usage (SCSS):
+| @include floats(<TYPE>)
+|
+| TYPE    : left, right, none.
+|
+| Usage (CSS):
+| .float--<TYPE>
+| ------------------------ */
+
+@mixin floats($name) {
+  .float--#{$name} {
+    float: $name;
+  }
+}
+
+@include floats(left);
+@include floats(right);
+@include floats(none);

@@ -1,0 +1,37 @@
+/* ------------------------
+| BADGE
+| ------------------------ */
+
+%tool {
+  border-radius: .3rem;
+  display: inline-block;
+  font: {
+    size: 75%;
+    weight: 700;
+  }
+  line-height: 1;
+  margin: .3rem;
+  padding: .3rem .5rem;
+  vertical-align: middle;
+}
+.badge {
+  @extend %tool;
+
+  &--info {
+    background-color: map-get($defcolor, "info");
+    @extend %tool;
+  }
+  &--success {
+    background-color: map-get($defcolor, "success");
+    @extend %tool;
+  }
+  &--warning {
+    background-color: map-get($defcolor, "warning");
+    @extend %tool;
+  }
+  &--danger {
+    background-color: map-get($defcolor, "danger");
+    @extend %tool;
+  }
+}
+

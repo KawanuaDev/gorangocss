@@ -1,0 +1,26 @@
+/* ------------------------
+| BADGE
+| ------------------------ */
+
+$darkside: false;
+$opacity: .2;
+$pos: 0 -8px 0;
+
+.highlight {
+  &--info {
+    box-shadow: inset $pos rgba(map-get($defcolor, "info"), $opacity);
+    background-color: transparent;
+  }
+  &--success {
+    box-shadow: inset $pos rgba(map-get($defcolor, "success"), $opacity);
+    background-color: transparent;
+  }
+  &--warning {
+    box-shadow: inset $pos rgba(map-get($defcolor, "warning"), $opacity);
+    background-color: transparent;
+  }
+  &--danger {
+    box-shadow: inset $pos rgba(map-get($defcolor, "danger"), $opacity);
+    background-color: transparent;
+  }
+}

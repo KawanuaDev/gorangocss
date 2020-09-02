@@ -1,0 +1,127 @@
+/* ------------------------
+| BUTTON
+| ------------------------ */
+
+// $defcolor: (
+//   "info": #1982C4,
+//   "success": #8AC926,
+//   "warning": #FFCA3A,
+//   "danger": #FF595E,
+//   "dark": #212529,
+//   "light": #f8f9fa
+// );
+
+%btnshare {
+  border: none;
+  border-radius: .375rem;
+  // box-shadow: -7px -7px 20px 0 rgba(255,255,255,.9),-4px -4px 5px 0 rgba(255,255,255,.9),0 0 3px 0 rgba(0,0,0,.3);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: .5rem;
+  position: relative;
+  // transition: box-shadow 0.3s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    // box-shadow: 0 -.7rem rgba(0, 0, 0, 0.2) inset;
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
+  }
+  &:active {
+    top: 1px;
+  }
+}
+
+.button {
+  padding: .7em 1em;
+  display: inline-block;
+
+  &.-outline {
+    &-light {
+      border: 1px solid map-get($defcolor, "light" );
+      color: map-get($defcolor, "light" );
+
+      &:hover {
+        background-color: map-get($defcolor, "light" );
+        color: map-get($defcolor, "dark" );
+      }
+    }
+    &-info {
+      border: 1px solid map-get($defcolor, "info" );
+      color: map-get($defcolor, "info" );
+
+      &:hover {
+        background-color: map-get($defcolor, "info" );
+        color: map-get($defcolor, "light" );
+      }
+    }
+    &-success {
+      border: 1px solid map-get($defcolor, "success" );
+      color: map-get($defcolor, "success" );
+
+      &:hover {
+        background-color: map-get($defcolor, "success" );
+        color: map-get($defcolor, "light" );
+      }
+    }
+    &-warning {
+      border: 1px solid map-get($defcolor, "warning" );
+      color: map-get($defcolor, "warning" );
+
+      &:hover {
+        background-color: map-get($defcolor, "warning" );
+        color: map-get($defcolor, "light" );
+      }
+    }
+    &-danger {
+      border: 1px solid map-get($defcolor, "danger" );
+      color: map-get($defcolor, "danger" );
+
+      &:hover {
+        background-color: map-get($defcolor, "danger" );
+        color: map-get($defcolor, "light" );
+      }
+    }
+  }
+
+  &--xs {
+    @extend %btnshare;
+    min-width: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  &--sm {
+    @extend %btnshare;
+    min-width: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    height: 2rem;
+    font-size: 0.875rem;
+  }
+
+  &--md {
+    @extend %btnshare;
+    min-width: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  &--lg {
+    @extend %btnshare;
+    min-width: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 3rem;
+    font-size: 1.125rem;
+  }
+}

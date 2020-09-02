@@ -1,0 +1,35 @@
+/* ------------------------
+| DROPDOWN
+| ------------------------ */
+
+.dropdown {
+  display: inline-flex;
+  position: relative;
+  // vertical-align: top;
+  
+  &__menu {
+    display: none;
+    left: 0;
+    min-width: 12rem;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+  }
+  &__content {
+    background-color: white;
+    box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border-radius: .5rem;
+  }
+  &__item {
+    display: block;
+    line-height: 1.5;
+    padding: .3rem 1rem;
+    position: relative;
+  }
+  &:hover &__menu {
+    display: block;
+  }
+}

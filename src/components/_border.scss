@@ -1,0 +1,299 @@
+/* ------------------------
+| BORDER
+| ------------------------
+| Usage (SCSS):
+| @include border(<NAME>,<NUMBER>,<UNIT>)
+|
+| NAME    : all, a, top, t, right, r, bottom, b, left, l
+| NUMBER  : 1 - unlimited
+| UNIT    : px, em, rem
+
+| Usage (CSS):
+| .border--<NUMBER>
+| .border--t--<NUMBER>
+| .border--r-<NUMBER>
+| .border--b--<NUMBER>
+| .border--l--<NUMBER>
+| ------------------------ */
+
+@mixin border($name, $num, $unit, $type) {
+  @if $name == "all" or $name == "a" or $name == "" {
+    .border--#{$num} {
+      border: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "top" or $name == "t" {
+    .border--#{$name}--#{$num} {
+      border-top: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "right" or $name == "r" {
+    .border--#{$name}--#{$num} {
+      border-right: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "bottom" or $name == "b" {
+    .border--#{$name}--#{$num} {
+      border-bottom: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "left" or $name == "l" {
+    .border--#{$name}--#{$num} {
+      border-left: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "x" {
+    .border--#{$name}--#{$num} {
+      border-left: $num + $unit + " " + $type;
+      border-right: $num + $unit + " " + $type;
+    }
+  }
+  @if $name == "y" {
+    .border--#{$name}--#{$num} {
+      border-top: $num + $unit + " " + $type;
+      border-bottom: $num + $unit + " " + $type;
+    }
+  }
+}
+
+@include border(a,1,px,solid);
+@include border(a,2,px,solid);
+@include border(a,3,px,solid);
+@include border(a,4,px,solid);
+@include border(a,5,px,solid);
+@include border(a,6,px,solid);
+@include border(a,7,px,solid);
+@include border(a,8,px,solid);
+@include border(a,9,px,solid);
+@include border(a,10,px,solid);
+
+@include border(t,1,px,solid);
+@include border(t,2,px,solid);
+@include border(t,3,px,solid);
+@include border(t,4,px,solid);
+@include border(t,5,px,solid);
+@include border(t,6,px,solid);
+@include border(t,7,px,solid);
+@include border(t,8,px,solid);
+@include border(t,9,px,solid);
+@include border(t,10,px,solid);
+
+@include border(r,1,px,solid);
+@include border(r,2,px,solid);
+@include border(r,3,px,solid);
+@include border(r,4,px,solid);
+@include border(r,5,px,solid);
+@include border(r,6,px,solid);
+@include border(r,7,px,solid);
+@include border(r,8,px,solid);
+@include border(r,9,px,solid);
+@include border(r,10,px,solid);
+
+@include border(b,1,px,solid);
+@include border(b,2,px,solid);
+@include border(b,3,px,solid);
+@include border(b,4,px,solid);
+@include border(b,5,px,solid);
+@include border(b,6,px,solid);
+@include border(b,7,px,solid);
+@include border(b,8,px,solid);
+@include border(b,9,px,solid);
+@include border(b,10,px,solid);
+
+@include border(l,1,px,solid);
+@include border(l,2,px,solid);
+@include border(l,3,px,solid);
+@include border(l,4,px,solid);
+@include border(l,5,px,solid);
+@include border(l,6,px,solid);
+@include border(l,7,px,solid);
+@include border(l,8,px,solid);
+@include border(l,9,px,solid);
+@include border(l,10,px,solid);
+
+@include border(x,1,px,solid);
+@include border(x,2,px,solid);
+@include border(x,3,px,solid);
+@include border(x,4,px,solid);
+@include border(x,5,px,solid);
+@include border(x,6,px,solid);
+@include border(x,7,px,solid);
+@include border(x,8,px,solid);
+@include border(x,9,px,solid);
+@include border(x,10,px,solid);
+
+@include border(y,1,px,solid);
+@include border(y,2,px,solid);
+@include border(y,3,px,solid);
+@include border(y,4,px,solid);
+@include border(y,5,px,solid);
+@include border(y,6,px,solid);
+@include border(y,7,px,solid);
+@include border(y,8,px,solid);
+@include border(y,9,px,solid);
+@include border(y,10,px,solid);
+
+
+/* ------------------------
+| BORDER-RADIUS
+| ------------------------
+| Usage (SCSS):
+| @include rounded(<NAME>,<NUMBER>,<UNIT>)
+|
+| NAME    : all, a, top, t, right, r, bottom, b, left, l
+| NUMBER  : 1 - unlimited
+| UNIT    : px, em, rem
+|
+| Usage (CSS):
+| .rounded--<NUMBER>
+| .rounded--t--<NUMBER>
+| .rounded--r-<NUMBER>
+| .rounded--b--<NUMBER>
+| .rounded--l--<NUMBER>
+| .rounded--full
+| ------------------------ */
+
+@mixin rounded($name, $num, $unit) {
+  @if $name == "all" or $name == "a" {
+    @if $num < 1 {
+      .rounded--1 {
+        border-radius: 1 + $unit;
+        overflow: hidden;
+      }
+    }
+    @if $num >= 1 {
+      .rounded--#{$num} {
+        border-radius: $num + $unit;
+        overflow: hidden;
+      }
+    }
+  }
+  @if $name == "top" or $name == "t" {
+    @if $num < 1 {
+      .rounded--t--1 {
+        border-top-left-radius: 1 + $unit;
+        border-top-right-radius: 1 + $unit;
+        overflow: hidden;
+      }
+    }
+    @if $num >= 1 {
+      .rounded--t--#{$num} {
+        border-top-left-radius: $num + $unit;
+        border-top-right-radius: $num + $unit;
+        overflow: hidden;
+      }
+    }
+  }
+  @if $name == "right" or $name == "r" {
+    @if $num < 1 {
+      .rounded--r--1 {
+        border-top-right-radius: 1 + $unit;
+        border-bottom-right-radius: 1 + $unit;
+        overflow: hidden;
+      }
+    }
+    @if $num >= 1 {
+      .rounded--r--#{$num} {
+        border-top-right-radius: $num + $unit;
+        border-bottom-right-radius: $num + $unit;
+        overflow: hidden;
+      }
+    }    
+  }
+  @if $name == "bottom" or $name == "b" {
+    @if $num < 1 {
+      .rounded--b--1 {
+        border-bottom-right-radius: 1 + $unit;
+        border-bottom-left-radius: 1 + $unit;
+        overflow: hidden;
+      }
+    }
+    @if $num >= 1 {
+      .rounded--b--#{$num} {
+        border-bottom-right-radius: $num + $unit;
+        border-bottom-left-radius: $num + $unit;
+        overflow: hidden;
+      }
+    }
+  }
+  @if $name == "left" or $name == "l" {
+    @if $num < 1 {
+      .rounded--l--1 {
+        border-bottom-left-radius: 1 + $unit;
+        border-top-left-radius: 1 + $unit;
+        overflow: hidden;
+      }
+    }
+    @if $num >= 1 {
+      .rounded--l--#{$num} {
+        border-bottom-left-radius: $num + $unit;
+        border-top-left-radius: $num + $unit;
+        overflow: hidden;
+      }
+    }
+  }
+  @if $name == "full" or $name == "f" {
+    .rounded--#{$name} {
+      border-radius: 50rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@include rounded(a,1,px);
+@include rounded(a,2,px);
+@include rounded(a,3,px);
+@include rounded(a,4,px);
+@include rounded(a,5,px);
+@include rounded(a,6,px);
+@include rounded(a,7,px);
+@include rounded(a,8,px);
+@include rounded(a,9,px);
+@include rounded(a,10,px);
+
+@include rounded(t,1,px);
+@include rounded(t,2,px);
+@include rounded(t,3,px);
+@include rounded(t,4,px);
+@include rounded(t,5,px);
+@include rounded(t,6,px);
+@include rounded(t,7,px);
+@include rounded(t,8,px);
+@include rounded(t,9,px);
+@include rounded(t,10,px);
+
+@include rounded(r,1,px);
+@include rounded(r,2,px);
+@include rounded(r,3,px);
+@include rounded(r,4,px);
+@include rounded(r,5,px);
+@include rounded(r,6,px);
+@include rounded(r,7,px);
+@include rounded(r,8,px);
+@include rounded(r,9,px);
+@include rounded(r,10,px);
+
+@include rounded(b,1,px);
+@include rounded(b,2,px);
+@include rounded(b,3,px);
+@include rounded(b,4,px);
+@include rounded(b,5,px);
+@include rounded(b,6,px);
+@include rounded(b,7,px);
+@include rounded(b,8,px);
+@include rounded(b,9,px);
+@include rounded(b,10,px);
+
+@include rounded(l,1,px);
+@include rounded(l,2,px);
+@include rounded(l,3,px);
+@include rounded(l,4,px);
+@include rounded(l,5,px);
+@include rounded(l,6,px);
+@include rounded(l,7,px);
+@include rounded(l,8,px);
+@include rounded(l,9,px);
+@include rounded(l,10,px);
+
+@include rounded(full,"","");
+

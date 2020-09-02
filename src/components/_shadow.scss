@@ -1,0 +1,63 @@
+/* ------------------------
+| SHADOW
+| ------------------------
+| Usage (SCSS):
+| @include shadow(<TYPE>)
+|
+| TYPE    : xs, sm, md, lg, xl, inner, 0
+|
+| Usage (CSS):
+| .shadow--<TYPE>
+| ------------------------ */
+
+@mixin shadow($type) {
+  @if $type == "xs" {
+    .shadow--#{$type} {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+  }
+  @if $type == "sm" {
+    .shadow--#{$type} {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+  }
+  @if $type == "" {
+    .shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+  @if $type == "md" {
+    .shadow--#{$type} {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  }
+  @if $type == "lg" {
+    .shadow--#{$type} {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  }
+  @if $type == "xl" {
+    .shadow--#{$type} {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  }
+  @if $type == "inner" {
+    .shadow--#{$type} {
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+  @if $type == "0" {
+    .shadow--#{$type} {
+      box-shadow: none;
+    }
+  }
+}
+
+@include shadow(xs);
+@include shadow(sm);
+@include shadow("");
+@include shadow(md);
+@include shadow(lg);
+@include shadow(xl);
+@include shadow(inner);
+@include shadow(0);

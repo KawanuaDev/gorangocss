@@ -1,0 +1,339 @@
+/* ------------------------
+| BACKGROUND-COLOR
+| ------------------------
+| Usage (SCSS):
+| @include bgcolor(<NAME>)
+|
+| NAME    : white, blue, whitesmoke, tomato, etc.
+| OPACITY : 0, 10, 20, 30, 40, 50.
+|
+| Usage (CSS):
+| .bg--<COLOR>
+| .bg--dark
+| .bg--light
+| .bg--black--<OPACITY>
+| ------------------------ */
+
+$grad: 141deg;
+$gradlevel: (
+  "left": 0,
+  "center": 71%,
+  "dark": 100%
+);
+
+@mixin bgcolor($name) {
+  @if $name != "dark" and $name != "light" and $name != "black" and $name != "info" and $name != "success" and $name != "warning" and $name != "danger" {
+    .bg--#{$name} {
+      background-color: $name;
+    }
+  }
+  @if $name == "dark" {
+    .bg--dark {
+      background-color: map-get($defcolor, "dark");
+      color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "darkd") map-get($gradlevel, "left"), 
+          map-get($defcolor, "dark") map-get($gradlevel, "center"), 
+          map-get($defcolor, "darkl") map-get($gradlevel, "dark")
+        );
+        color: map-get($defcolor, "light");
+
+        .hero__subtitle {
+          color: rgba(map-get($defcolor, "light"),.9);
+        }
+      }
+    }
+  }
+  @if $name == "light" {
+    .bg--light {
+      background-color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "lightd") map-get($gradlevel, "left"), 
+          map-get($defcolor, "light") map-get($gradlevel, "center"), 
+          map-get($defcolor, "lightl") map-get($gradlevel, "dark")
+        );
+      }
+    }
+  }
+  @if $name == "info" {
+    .bg--info {
+      background-color: map-get($defcolor, "info");
+      color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "infod") map-get($gradlevel, "left"), 
+          map-get($defcolor, "info") map-get($gradlevel, "center"), 
+          map-get($defcolor, "infol") map-get($gradlevel, "dark")
+        );
+        color: map-get($defcolor, "light");
+
+        .hero__subtitle {
+          color: rgba(map-get($defcolor, "light"),.9);
+        }
+      }
+    }
+  }
+  @if $name == "success" {
+    .bg--success {
+      background-color: map-get($defcolor, "success");
+      color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "successd") map-get($gradlevel, "left"), 
+          map-get($defcolor, "success") map-get($gradlevel, "center"), 
+          map-get($defcolor, "successl") map-get($gradlevel, "dark")
+        );
+        color: map-get($defcolor, "light");
+
+        .hero__subtitle {
+          color: rgba(map-get($defcolor, "light"),.9);
+        }
+      }
+    }
+  }
+  @if $name == "warning" {
+    .bg--warning {
+      background-color: map-get($defcolor, "warning");
+      color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "warningd") map-get($gradlevel, "left"), 
+          map-get($defcolor, "warning") map-get($gradlevel, "center"), 
+          map-get($defcolor, "warningl") map-get($gradlevel, "dark")
+        );
+        color: map-get($defcolor, "light");
+
+        .hero__subtitle {
+          color: rgba(map-get($defcolor, "light"),.9);
+        }
+      }
+    }
+  }
+  @if $name == "danger" {
+    .bg--danger {
+      background-color: map-get($defcolor, "danger");
+      color: map-get($defcolor, "light");
+
+      &--gradient {
+        background-image: linear-gradient(
+          $grad, 
+          map-get($defcolor, "dangerd") map-get($gradlevel, "left"), 
+          map-get($defcolor, "danger") map-get($gradlevel, "center"), 
+          map-get($defcolor, "dangerl") map-get($gradlevel, "dark")
+        );
+        color: map-get($defcolor, "light");
+
+        .hero__subtitle {
+          color: rgba(map-get($defcolor, "light"),.9);
+        }
+      }
+    }
+  }
+}
+
+@mixin bgblack($name, $opacity) {
+  @if $opacity == 0 {
+    .bg--black {
+      background-color: black;
+    }
+  }
+  @if $opacity == 10 {
+    .bg--black--10 {
+      background-color: #171a1c;
+    }
+  }
+  @if $opacity == 20 {
+    .bg--black--20 {
+      background-color: #2d3339;
+    }
+  }
+  @if $opacity == 30 {
+    .bg--black--30 {
+      background-color: #444d55;
+    }
+  }
+  @if $opacity == 40 {
+    .bg--black--40 {
+      background-color: #5b6671;
+    }
+  }
+  @if $opacity == 50 {
+    .bg--black--50 {
+      background-color: #71808e;
+    }
+  }
+}
+
+@include bgblack(black,0);
+@include bgblack(black,10);
+@include bgblack(black,20);
+@include bgblack(black,30);
+@include bgblack(black,40);
+@include bgblack(black,50);
+
+@include bgcolor(dark);
+@include bgcolor(light);
+@include bgcolor(info);
+@include bgcolor(success);
+@include bgcolor(warning);
+@include bgcolor(danger);
+
+@include bgcolor(white);
+@include bgcolor(ivory);
+@include bgcolor(lightyellow);
+@include bgcolor(yellow);
+@include bgcolor(snow);
+@include bgcolor(floralwhite);
+@include bgcolor(lemonchiffon);
+@include bgcolor(cornsilk);
+@include bgcolor(seashell);
+@include bgcolor(lavenderblush);
+@include bgcolor(papayawhip);
+@include bgcolor(blanchedalmond);
+@include bgcolor(mistyrose);
+@include bgcolor(bisque);
+@include bgcolor(moccasin);
+@include bgcolor(navajowhite);
+@include bgcolor(peachpuff);
+@include bgcolor(gold);
+@include bgcolor(pink);
+@include bgcolor(lightpink);
+@include bgcolor(orange);
+@include bgcolor(lightsalmon);
+@include bgcolor(darkorange);
+@include bgcolor(coral);
+@include bgcolor(hotpink);
+@include bgcolor(tomato);
+@include bgcolor(orangered);
+@include bgcolor(deeppink);
+@include bgcolor(magenta);
+@include bgcolor(fuchsia);
+@include bgcolor(red);
+@include bgcolor(oldlace);
+@include bgcolor(lightgoldenrodyellow);
+@include bgcolor(linen);
+@include bgcolor(antiquewhite);
+@include bgcolor(salmon);
+@include bgcolor(ghostwhite);
+@include bgcolor(mintcream);
+@include bgcolor(whitesmoke);
+@include bgcolor(beige);
+@include bgcolor(wheat);
+@include bgcolor(sandybrown);
+@include bgcolor(azure);
+@include bgcolor(honeydew);
+@include bgcolor(aliceblue);
+@include bgcolor(khaki);
+@include bgcolor(lightcoral);
+@include bgcolor(palegoldenrod);
+@include bgcolor(violet);
+@include bgcolor(darksalmon);
+@include bgcolor(lavender);
+@include bgcolor(lightcyan);
+@include bgcolor(burlywood);
+@include bgcolor(plum);
+@include bgcolor(gainsboro);
+@include bgcolor(crimson);
+@include bgcolor(palevioletred);
+@include bgcolor(goldenrod);
+@include bgcolor(orchid);
+@include bgcolor(thistle);
+@include bgcolor(lightgrey);
+@include bgcolor(lightgray);
+@include bgcolor(tan);
+@include bgcolor(chocolate);
+@include bgcolor(peru);
+@include bgcolor(indianred);
+@include bgcolor(mediumvioletred);
+@include bgcolor(silver);
+@include bgcolor(darkkhaki);
+@include bgcolor(rosybrown);
+@include bgcolor(mediumorchid);
+@include bgcolor(darkgoldenrod);
+@include bgcolor(firebrick);
+@include bgcolor(powderblue);
+@include bgcolor(lightsteelblue);
+@include bgcolor(paleturquoise);
+@include bgcolor(greenyellow);
+@include bgcolor(lightblue);
+@include bgcolor(darkgrey);
+@include bgcolor(darkgray);
+@include bgcolor(brown);
+@include bgcolor(sienna);
+@include bgcolor(yellowgreen);
+@include bgcolor(darkorchid);
+@include bgcolor(palegreen);
+@include bgcolor(darkviolet);
+@include bgcolor(mediumpurple);
+@include bgcolor(lightgreen);
+@include bgcolor(darkseagreen);
+@include bgcolor(saddlebrown);
+@include bgcolor(darkmagenta);
+@include bgcolor(darkred);
+@include bgcolor(blueviolet);
+@include bgcolor(lightskyblue);
+@include bgcolor(skyblue);
+@include bgcolor(grey);
+@include bgcolor(gray);
+@include bgcolor(olive);
+@include bgcolor(purple);
+@include bgcolor(maroon);
+@include bgcolor(aquamarine);
+@include bgcolor(chartreuse);
+@include bgcolor(lawngreen);
+@include bgcolor(mediumslateblue);
+@include bgcolor(lightslategrey);
+@include bgcolor(lightslategray);
+@include bgcolor(slategrey);
+@include bgcolor(slategray);
+@include bgcolor(olivedrab);
+@include bgcolor(slateblue);
+@include bgcolor(dimgrey);
+@include bgcolor(dimgray);
+@include bgcolor(mediumaquamarine);
+@include bgcolor(rebeccapurple);
+@include bgcolor(cornflowerblue);
+@include bgcolor(cadetblue);
+@include bgcolor(darkolivegreen);
+@include bgcolor(indigo);
+@include bgcolor(mediumturquoise);
+@include bgcolor(darkslateblue);
+@include bgcolor(steelblue);
+@include bgcolor(royalblue);
+@include bgcolor(turquoise);
+@include bgcolor(mediumseagreen);
+@include bgcolor(limegreen);
+@include bgcolor(darkslategrey);
+@include bgcolor(darkslategray);
+@include bgcolor(seagreen);
+@include bgcolor(forestgreen);
+@include bgcolor(lightseagreen);
+@include bgcolor(dodgerblue);
+@include bgcolor(midnightblue);
+@include bgcolor(cyan);
+@include bgcolor(aqua);
+@include bgcolor(springgreen);
+@include bgcolor(lime);
+@include bgcolor(mediumspringgreen);
+@include bgcolor(darkturquoise);
+@include bgcolor(deepskyblue);
+@include bgcolor(darkcyan);
+@include bgcolor(teal);
+@include bgcolor(green);
+@include bgcolor(darkgreen);
+@include bgcolor(blue);
+@include bgcolor(mediumblue);
+@include bgcolor(darkblue);
+@include bgcolor(navy);

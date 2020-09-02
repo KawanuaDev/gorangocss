@@ -1,0 +1,44 @@
+$color--info: #1982C4;
+$color--success: #8AC926;
+$color--warning: #FFCA3A;
+$color--danger: #FF595E;
+
+// %wids {
+//   &--info {
+//     background-color: map-get($defcolor, "info");
+//   }
+//   &--success {
+//     background-color: map-get($defcolor, "success");
+//   }
+//   &--warning {
+//     background-color: map-get($defcolor, "warning");
+//   }
+//   &--danger {
+//     background-color: map-get($defcolor, "danger");
+//   } 
+// }
+
+
+$defcolor: (
+  "a": #1982C4,
+  "ahover": #1982C4,
+  "info": #1982C4,
+  "infod": #21295C,
+  "infol": #67B7FD,
+  "success": #8AC926,
+  "successd": #009B79,
+  "successl": #BEFC58,
+  "warning": #FFCA3A,
+  "warningd": #EDB415,
+  "warningl": #FAD366,
+  "danger": #FF595E,
+  "dangerd": #B84246,
+  "dangerl": #DE6D70,
+  "dark": #212529,
+  "darkd": #10151A,
+  "darkl": #3D414B,
+  "light": #F1F4F6,
+  "lightd": #E6EBEF,
+  "lightdl": #f8f9fa
+);
+

@@ -1,0 +1,164 @@
+/* ------------------------
+| BADGE-COLOR
+| ------------------------
+| Usage (SCSS):
+| @include badge(<NAME>)
+|
+| NAME    : white, blue, whitesmoke, tomato, etc.
+|
+| Usage (CSS):
+| .badge--<COLOR>
+| ------------------------ */
+
+@mixin badge($name) {
+  .badge--#{$name} {
+    background-color: $name;
+  }
+}
+
+@include badge(black);
+@include badge(dimgray);
+@include badge(gray);
+@include badge(darkgray);
+@include badge(slategray);
+@include badge(lightslategray);
+@include badge(lightsteelblue);
+@include badge(silver);
+@include badge(lightgray);
+@include badge(gainsboro);
+
+@include badge(white);
+@include badge(whitesmoke);
+@include badge(ghostwhite);
+@include badge(antiquewhite);
+@include badge(azure);
+@include badge(lavenderblush);
+@include badge(ivory);
+@include badge(snow);
+@include badge(seashell);
+@include badge(mintcream);
+@include badge(floralwhite);
+@include badge(honeydew);
+@include badge(papayawhip);
+@include badge(cornsilk);
+@include badge(beige);
+@include badge(linen);
+@include badge(bisque);
+@include badge(moccasin);
+@include badge(navajowhite);
+@include badge(blanchedalmond);
+@include badge(oldlace);
+@include badge(lightyellow);
+@include badge(khaki);
+@include badge(darkkhaki);
+@include badge(lightgoldenrodyellow);
+@include badge(lemonchiffon);
+@include badge(palegoldenrod);
+@include badge(tan);
+
+@include badge(lawngreen);
+@include badge(palegreen);
+@include badge(lightgreen);
+@include badge(greenyellow);
+@include badge(chartreuse);
+@include badge(lime);
+@include badge(yellowgreen);
+@include badge(springgreen);
+@include badge(mediumspringgreen);
+@include badge(limegreen);
+@include badge(green);
+@include badge(forestgreen);
+@include badge(olivedrab);
+@include badge(olive);
+@include badge(darkolivegreen);
+@include badge(darkseagreen);
+@include badge(mediumseagreen);
+@include badge(seagreen);
+@include badge(darkgreen);
+@include badge(teal);
+@include badge(darkslategray);
+
+@include badge(aliceblue);
+@include badge(lavender);
+@include badge(lightcyan);
+@include badge(paleturquoise);
+@include badge(aqua);
+@include badge(cyan);
+@include badge(turquoise);
+@include badge(mediumaquamarine);
+@include badge(aquamarine);
+@include badge(powderblue);
+@include badge(mediumturquoise);
+@include badge(darkturquoise);
+@include badge(lightseagreen);
+@include badge(cadetblue);
+@include badge(darkcyan);
+@include badge(lightblue);
+@include badge(skyblue);
+@include badge(lightskyblue);
+@include badge(deepskyblue);
+@include badge(cornflowerblue);
+@include badge(steelblue);
+@include badge(dodgerblue);
+@include badge(royalblue);
+@include badge(slateblue);
+@include badge(blue);
+@include badge(mediumblue);
+@include badge(midnightblue);
+@include badge(darkblue);
+@include badge(navy);
+@include badge(darkslateblue);
+
+@include badge(indigo);
+@include badge(darkviolet);
+@include badge(blueviolet);
+@include badge(darkorchid);
+@include badge(purple);
+@include badge(mediumorchid);
+@include badge(mediumslateblue);
+@include badge(mediumpurple);
+@include badge(plum);
+@include badge(thistle);
+@include badge(pink);
+
+@include badge(orchid);
+@include badge(violet);
+@include badge(hotpink);
+@include badge(fuchsia);
+@include badge(magenta);
+@include badge(mediumvioletred);
+@include badge(darkmagenta);
+@include badge(darkred);
+@include badge(maroon);
+@include badge(deeppink);
+@include badge(firebrick);
+@include badge(orangered);
+@include badge(crimson);
+@include badge(red);
+@include badge(tomato);
+@include badge(indianred);
+@include badge(salmon);
+@include badge(darkorange);
+@include badge(darksalmon);
+@include badge(palevioletred);
+@include badge(lightcoral);
+@include badge(orange);
+@include badge(lightpink);
+@include badge(sandybrown);
+@include badge(lightsalmon);
+@include badge(mistyrose);
+@include badge(peachpuff);
+@include badge(wheat);
+@include badge(burlywood);
+@include badge(yellow);
+@include badge(gold);
+@include badge(goldenrod);
+@include badge(darkgoldenrod);
+@include badge(rosybrown);
+@include badge(brown);
+@include badge(chocolate);
+@include badge(coral);
+@include badge(peru);
+@include badge(sienna);
+@include badge(saddlebrown);
+

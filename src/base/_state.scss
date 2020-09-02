@@ -1,0 +1,26 @@
+/* ------------------------------------------
+|   STATE
+|   Override defaults
+------------------------------------------ */
+
+code, pre, kbd, samp {
+  font-size: 85%;
+  word-break: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar {
+  &__wrapper li:last-child .dropdown__menu {
+    right: -2rem;
+    left: unset;
+  }
+
+  .dropdown__item {
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}

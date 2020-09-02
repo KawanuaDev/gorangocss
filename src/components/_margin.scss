@@ -1,0 +1,146 @@
+/* ------------------------
+| MARGIN
+| ------------------------
+| Usage (SCSS):
+| @include margin(<NAME>,<NUMBER>,<UNIT>)
+|
+| NAME    : all, top, t, right, r, bottom, b, left, l, x, y
+| NUMBER  : 1 - unlimited
+| UNIT    : px, em, rem
+
+| Usage (CSS):
+| .ma--<NUMBER> OR .margin--<NUMBER>
+| .mt--<NUMBER> OR .margin--top--<NUMBER> OR .margin--t--<NUMBER>
+| .mr---<NUMBER> OR .margin--right--<NUMBER> OR .margin--r--<NUMBER>
+| .mb--<NUMBER> OR .margin--bottom--<NUMBER> OR .margin--b--<NUMBER>
+| .ml--<NUMBER> OR .margin--left--<NUMBER> OR .margin--l--<NUMBER>
+| .mx--<NUMBER> OR .margin--x--<NUMBER>
+| .my--<NUMBER> OR .margin--y--<NUMBER>
+| ------------------------ */
+
+@mixin margin($name, $num, $unit) {
+  @if $name == "all" or $name == "a" {
+    .ma--#{$num}, .margin--#{$num} {
+      margin: $num + $unit;
+    }
+  }
+  @if $name == "bottom" or $name == "b" {
+    .mb--#{$num}, .margin--#{$name}--#{$num} {
+      margin-bottom: $num + $unit;
+    }
+  }
+  @if $name == "top" or $name == "t" {
+    .mt--#{$num}, .margin--#{$name}--#{$num} {
+      margin-top: $num + $unit;
+    }
+  }
+  @if $name == "left" or $name == "l" {
+    .ml--#{$num}, .margin--#{$name}--#{$num} {
+      margin-left: $num + $unit;
+    }
+  }
+  @if $name == "right" or $name == "r" {
+    .mr--#{$num}, .margin--#{$name}--#{$num} {
+      margin-right: $num + $unit;
+    }
+  }
+  @if $name == "y" {
+    .my--#{$num}, .margin--#{$name}--#{$num} {
+      margin: {
+          top: $num + $unit;
+          bottom: $num + $unit;
+      }
+    }
+  }
+  @if $name == "x" {
+    .mx--#{$num}, .margin--#{$name}--#{$num} {
+      margin: {
+          left: $num + $unit;
+          right: $num + $unit;
+      }
+    }
+  }
+}
+
+@include margin(a,1,rem);
+@include margin(a,2,rem);
+@include margin(a,3,rem);
+@include margin(a,4,rem);
+@include margin(a,5,rem);
+@include margin(a,6,rem);
+@include margin(a,7,rem);
+@include margin(a,8,rem);
+@include margin(a,9,rem);
+@include margin(a,10,rem);
+
+@include margin(t,auto,"");
+@include margin(t,1,rem);
+@include margin(t,2,rem);
+@include margin(t,3,rem);
+@include margin(t,4,rem);
+@include margin(t,5,rem);
+@include margin(t,6,rem);
+@include margin(t,7,rem);
+@include margin(t,8,rem);
+@include margin(t,9,rem);
+@include margin(t,10,rem);
+
+@include margin(r,auto,"");
+@include margin(r,1,rem);
+@include margin(r,2,rem);
+@include margin(r,3,rem);
+@include margin(r,4,rem);
+@include margin(r,5,rem);
+@include margin(r,6,rem);
+@include margin(r,7,rem);
+@include margin(r,8,rem);
+@include margin(r,9,rem);
+@include margin(r,10,rem);
+
+@include margin(b,auto,"");
+@include margin(b,1,rem);
+@include margin(b,2,rem);
+@include margin(b,3,rem);
+@include margin(b,4,rem);
+@include margin(b,5,rem);
+@include margin(b,6,rem);
+@include margin(b,7,rem);
+@include margin(b,8,rem);
+@include margin(b,9,rem);
+@include margin(b,10,rem);
+
+@include margin(l,auto,"");
+@include margin(l,1,rem);
+@include margin(l,2,rem);
+@include margin(l,3,rem);
+@include margin(l,4,rem);
+@include margin(l,5,rem);
+@include margin(l,6,rem);
+@include margin(l,7,rem);
+@include margin(l,8,rem);
+@include margin(l,9,rem);
+@include margin(l,10,rem);
+
+@include margin(y,auto,"");
+@include margin(y,1,rem);
+@include margin(y,2,rem);
+@include margin(y,3,rem);
+@include margin(y,4,rem);
+@include margin(y,5,rem);
+@include margin(y,6,rem);
+@include margin(y,7,rem);
+@include margin(y,8,rem);
+@include margin(y,9,rem);
+@include margin(y,10,rem);
+
+@include margin(x,auto,"");
+@include margin(x,1,rem);
+@include margin(x,2,rem);
+@include margin(x,3,rem);
+@include margin(x,4,rem);
+@include margin(x,5,rem);
+@include margin(x,6,rem);
+@include margin(x,7,rem);
+@include margin(x,8,rem);
+@include margin(x,9,rem);
+@include margin(x,10,rem);

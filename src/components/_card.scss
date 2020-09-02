@@ -1,0 +1,22 @@
+/* ------------------------
+| CARD
+| ------------------------ */
+
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: unset;
+  }
+  &__subheader {
+    display: unset;
+  }
+  &__content {
+    display: unset;
+  }
+  &__footer {
+    display: unset;
+  }
+}

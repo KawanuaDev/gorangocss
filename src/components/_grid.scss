@@ -364,3 +364,97 @@ $gridgap: 0.5rem;
 @include gridgaps(8);
 @include gridgaps(9);
 @include gridgaps(10);
+
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 750px) {
+  .grid {
+    &.\-1fr-auto {
+      -ms-grid-rows: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+    &.-auto-1fr {
+      -ms-grid-rows: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+    &.-col-2, &.-auto-2x, &.-auto-auto {
+      -ms-grid-rows: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+    &.-col-3, &.-auto-3x, &.-auto-auto-auto {
+      -ms-grid-rows: repeat(3, auto);
+      grid-template-rows: repeat(3, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-rows: repeat(3, auto);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+}
+
+@media screen and (min-width: 755px) {
+  .grid {
+    &.\-1fr-auto {
+      -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+    }
+    &.-auto-1fr {
+      -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+    }
+    &.-col-2, &.-auto-2x, &.-auto-auto {
+      -ms-grid-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+    &.-col-3, &.-auto-3x, &.-auto-auto-auto {
+      -ms-grid-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .grid {
+    &.\-1fr-auto {
+      -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+    }
+    &.-auto-1fr {
+      -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+    }
+    &.-col-2, &.-auto-2x, &.-auto-auto {
+      -ms-grid-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+    &.-col-3, &.-auto-3x, &.-auto-auto-auto {
+      -ms-grid-columns: repeat(3, auto);
+      grid-template-columns: repeat(3, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(4, auto);
+      grid-template-columns: repeat(4, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(4, auto);
+      grid-template-columns: repeat(4, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(4, auto);
+      grid-template-columns: repeat(4, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(4, auto);
+      grid-template-columns: repeat(4, auto);
+    }
+    &.-col-4, &.-auto-4x, &.-auto-auto-auto-auto {
+      -ms-grid-columns: repeat(4, auto);
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+}

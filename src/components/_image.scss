@@ -63,17 +63,17 @@ img {
 @mixin filters($name, $unit) {
   @if $name == "blur" {
     .-blur-#{$unit} {
-      filter: blur($unit + "px");
+      filter: blur($unit + px);
     }
   }
   @if $name == "brightness" {
     .-brightness-#{$unit} {
-      filter: brightness($unit);
+      filter: brightness($unit + 0%);
     }
   }
   @if $name == "contrast" {
     .-contrast-#{$unit} {
-      filter: contrast($unit);
+      filter: contrast($unit + 0%);
     }
   }
   // @if $name == "drop-shadow" or $name == "dropshadow" or $name == "shadow" {
@@ -83,32 +83,32 @@ img {
   // }
   @if $name == "grayscale" {
     .-grayscale-#{$unit} {
-      filter: grayscale($unit);
+      filter: grayscale($unit + 0%);
     }
   }
   @if $name == "hue-rotate" {
     .-hue-rotate-#{$unit} {
-      filter: hue-rotate($unit + "deg");
+      filter: hue-rotate($unit + deg);
     }
   }
   @if $name == "invert" {
     .-invert-#{$unit} {
-      filter: invert($unit);
+      filter: invert($unit + 0%);
     }
   }
   @if $name == "opacity" {
     .-opacity-#{$unit} {
-      filter: opacity($unit);
+      filter: opacity($unit + 0%);
     }
   }
   @if $name == "saturate" {
     .-saturate-#{$unit} {
-      filter: saturate($unit);
+      filter: saturate($unit + 0%);
     }
   }
   @if $name == "sepia" {
     .-sepia-#{$unit} {
-      filter: sepia($unit);
+      filter: sepia($unit + 0%);
     }
   }
   @if $name == "initial" {
@@ -123,70 +123,70 @@ img {
   }
 }
 
-// @include filters(blur,0);
-// @include filters(blur,10);
-// @include filters(blur,20);
-// @include filters(blur,30);
-// @include filters(blur,40);
-// @include filters(blur,50);
-// @include filters(blur,60);
-// @include filters(blur,70);
-// @include filters(blur,80);
-// @include filters(blur,90);
-// @include filters(blur,100);
+@include filters(blur,0);
+@include filters(blur,10);
+@include filters(blur,20);
+@include filters(blur,30);
+@include filters(blur,40);
+@include filters(blur,50);
+@include filters(blur,60);
+@include filters(blur,70);
+@include filters(blur,80);
+@include filters(blur,90);
+@include filters(blur,100);
 
-// @include filters(brightness,0);
-// @include filters(brightness,0.25);
-// @include filters(brightness,0.5);
-// @include filters(brightness,0.75);
-// @include filters(brightness,1);
+@include filters(brightness,0);
+@include filters(brightness,25);
+@include filters(brightness,50);
+@include filters(brightness,75);
+@include filters(brightness,100);
 
-// @include filters(contrast,0);
-// @include filters(contrast,0.25);
-// @include filters(contrast,0.5);
-// @include filters(contrast,0.75);
-// @include filters(contrast,1);
+@include filters(contrast,0);
+@include filters(contrast,25);
+@include filters(contrast,50);
+@include filters(contrast,75);
+@include filters(contrast,100);
 
-// @include filters(grayscale,0);
-// @include filters(grayscale,0.25);
-// @include filters(grayscale,0.5);
-// @include filters(grayscale,0.75);
-// @include filters(grayscale,1);
+@include filters(grayscale,0);
+@include filters(grayscale,25);
+@include filters(grayscale,50);
+@include filters(grayscale,75);
+@include filters(grayscale,100);
 
-// @include filters(hue-rotate,0);
-// @include filters(hue-rotate,45);
-// @include filters(hue-rotate,90);
-// @include filters(hue-rotate,135);
-// @include filters(hue-rotate,180);
-// @include filters(hue-rotate,225);
-// @include filters(hue-rotate,270);
-// @include filters(hue-rotate,315);
-// @include filters(hue-rotate,360);
+@include filters(hue-rotate,0);
+@include filters(hue-rotate,45);
+@include filters(hue-rotate,90);
+@include filters(hue-rotate,135);
+@include filters(hue-rotate,180);
+@include filters(hue-rotate,225);
+@include filters(hue-rotate,270);
+@include filters(hue-rotate,315);
+@include filters(hue-rotate,360);
 
-// @include filters(invert,0);
-// @include filters(invert,0.25);
-// @include filters(invert,0.5);
-// @include filters(invert,0.75);
-// @include filters(invert,1);
+@include filters(invert,0);
+@include filters(invert,25);
+@include filters(invert,50);
+@include filters(invert,75);
+@include filters(invert,100);
 
-// @include filters(opacity,0);
-// @include filters(opacity,0.25);
-// @include filters(opacity,0.5);
-// @include filters(opacity,0.75);
-// @include filters(opacity,1);
+@include filters(opacity,0);
+@include filters(opacity,25);
+@include filters(opacity,50);
+@include filters(opacity,75);
+@include filters(opacity,100);
 
-// @include filters(saturate,0);
-// @include filters(saturate,0.25);
-// @include filters(saturate,0.5);
-// @include filters(saturate,0.75);
-// @include filters(saturate,1);
+@include filters(saturate,0);
+@include filters(saturate,25);
+@include filters(saturate,50);
+@include filters(saturate,75);
+@include filters(saturate,100);
 
-// @include filters(sepia,0);
-// @include filters(sepia,0.25);
-// @include filters(sepia,0.5);
-// @include filters(sepia,0.75);
-// @include filters(sepia,1);
+@include filters(sepia,0);
+@include filters(sepia,25);
+@include filters(sepia,50);
+@include filters(sepia,75);
+@include filters(sepia,100);
 
-// @include filters(initial,"");
+@include filters(initial,"");
 
-// @include filters(inherit,"");
+@include filters(inherit,"");
